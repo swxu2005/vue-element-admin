@@ -81,16 +81,16 @@ export default {
       }
     }
     const validatePassword = (rule, value, callback) => {
-      if (value.length < 6) {
-        callback(new Error('The password can not be less than 6 digits'))
-      } else {
-        callback()
-      }
+      // if (value.length < 6) {
+      // callback(new Error('The password can not be less than 6 digits'))
+      // } else {
+      callback()
+      // }
     }
     return {
       loginForm: {
         username: 'admin',
-        password: '1111111'
+        password: 'admin'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],

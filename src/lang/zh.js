@@ -1,6 +1,6 @@
-export default {
+let t = {
   route: {
-    dashboard: '首页',
+    dashboard: '首页'/* ,
     introduction: '简述',
     documentation: '文档',
     guide: '引导页',
@@ -62,7 +62,7 @@ export default {
     theme: '换肤',
     clipboardDemo: 'Clipboard',
     i18n: '国际化',
-    externalLink: '外链'
+    externalLink: '外链' */
   },
   navbar: {
     logOut: '退出登录',
@@ -80,7 +80,7 @@ export default {
     any: '随便填',
     thirdparty: '第三方登录',
     thirdpartyTips: '本地不能模拟，请结合自己业务进行模拟！！！'
-  },
+  }/* ,
   documentation: {
     documentation: '文档',
     github: 'Github 地址'
@@ -156,5 +156,364 @@ export default {
     close: '关闭',
     closeOthers: '关闭其它',
     closeAll: '关闭所有'
+  } */
+}
+
+const yisiRoute = {
+  authManage: '权限管理',
+  userManage: '用户管理',
+  deptManage: '部门管理',
+  roleManage: '角色管理',
+  sysManage: '系统设置',
+  menuManage: '菜单管理',
+  paramsManage: '参数管理',
+  dictManage: '字典管理',
+  dictDetail: '字典明细',
+  jobManage: '定时任务',
+  ossManage: '文件上传',
+  activitiManage: '工作流程',
+  processManage: '流程管理',
+  modelManage: '模型管理',
+  runningManage: '运行中的流程',
+  messageManage: '消息管理',
+  smsManage: '短信服务',
+  mailTemplate: '邮件模板',
+  mailLog: '邮件发送记录',
+  logManage: '日志管理',
+  logLogin: '登陆日志',
+  logOperation: '操作日志',
+  logError: '异常日志',
+  sysMonitor: '系统监控',
+  sqlMonitor: 'SQL监控',
+  demo: '功能示例',
+  newsManage: '新闻管理'
+}
+
+t.route = Object.assign(t.route, yisiRoute)
+
+const yisiLang = {
+  add: '新增',
+  delete: '删除',
+  deleteBatch: '删除',
+  update: '修改',
+  query: '查询',
+  export: '导出',
+  handle: '操作',
+  confirm: '确定',
+  cancel: '取消',
+  logout: '退出',
+  prompt: {
+    title: '提示',
+    info: '确定进行[{handle}]操作?',
+    success: '操作成功',
+    failed: '操作失败',
+    deleteBatch: '请选择删除项'
+  },
+  validate: {
+    required: '必填项不能为空',
+    format: '{attr}格式错误'
+  },
+  upload: {
+    text: '将文件拖到此处，或<em>点击上传</em>',
+    tip: '只支持{format}格式文件！',
+    button: '点击上传'
+  },
+  datePicker: {
+    range: '至',
+    start: '开始日期',
+    end: '结束日期'
+  },
+  /* 页面 */
+  notFound: {
+    desc: '抱歉！您访问的页面<em>失联</em>啦...',
+    back: '上一页',
+    home: '首页'
+  },
+  /* 模块 */
+  model: {
+    name: '名称',
+    key: '标识',
+    version: '版本',
+    createTime: '创建时间',
+    lastUpdateTime: '更新时间',
+    design: '在线设计',
+    deploy: '部署',
+    description: '描述'
+  },
+  process: {
+    name: '名称',
+    key: '标识',
+    deployFile: '部署流程文件',
+    id: '流程ID',
+    deploymentId: '部署ID',
+    version: '版本',
+    resourceName: 'XML',
+    diagramResourceName: '图片',
+    deploymentTime: '部署时间',
+    active: '激活',
+    suspend: '挂起',
+    convertToModel: '转换为模型'
+  },
+  running: {
+    id: '实例ID',
+    definitionKey: '定义Key',
+    processDefinitionId: '定义ID',
+    processDefinitionName: '定义名称',
+    activityId: '当前环节',
+    suspended: '是否挂起',
+    suspended0: '否',
+    suspended1: '是'
+  },
+  news: {
+    title: '标题',
+    pubDate: '发布时间',
+    createDate: '创建时间',
+    content: '内容'
+  },
+  schedule: {
+    beanName: 'bean名称',
+    beanNameTips: 'spring bean名称, 如: testTask',
+    pauseBatch: '暂停',
+    resumeBatch: '恢复',
+    runBatch: '执行',
+    log: '日志列表',
+    params: '参数',
+    cronExpression: 'cron表达式',
+    cronExpressionTips: '如: 0 0 12 * * ?',
+    remark: '备注',
+    status: '状态',
+    status0: '暂停',
+    status1: '正常',
+    statusLog0: '失败',
+    statusLog1: '成功',
+    pause: '暂停',
+    resume: '恢复',
+    run: '执行',
+    jobId: '任务ID',
+    times: '耗时(单位: 毫秒)',
+    createDate: '执行时间'
+  },
+  mail: {
+    name: '名称',
+    config: '邮件配置',
+    subject: '主题',
+    createDate: '创建时间',
+    send: '发送邮件',
+    content: '内容',
+    smtp: 'SMTP',
+    port: '端口号',
+    username: '邮箱账号',
+    password: '邮箱密码',
+    mailTo: '收件人',
+    mailCc: '抄送',
+    params: '模板参数',
+    paramsTips: '如：{"code": "123456"}',
+    templateId: '模版ID',
+    status: '状态',
+    status0: '发送失败',
+    status1: '发送成功',
+    mailFrom: '发送者'
+  },
+  sms: {
+    mobile: '手机号',
+    status: '状态',
+    status0: '发送失败',
+    status1: '发送成功',
+    config: '短信配置',
+    send: '发送短信',
+    platform: '平台类型',
+    platform1: '阿里云',
+    platform2: '腾讯云',
+    params: '参数',
+    paramsTips: '如：{"code": "123456"}',
+    params1: '参数1',
+    params2: '参数2',
+    params3: '参数3',
+    params4: '参数4',
+    createDate: '发送时间',
+    aliyunAccessKeyId: 'Key',
+    aliyunAccessKeyIdTips: '阿里云AccessKeyId',
+    aliyunAccessKeySecret: 'Secret',
+    aliyunAccessKeySecretTips: '阿里云AccessKeySecret',
+    aliyunSignName: '短信签名',
+    aliyunTemplateCode: '短信模板',
+    aliyunTemplateCodeTips: '短信模板CODE',
+    qcloudAppId: 'AppId',
+    qcloudAppIdTips: '腾讯云AppId',
+    qcloudAppKey: 'AppKey',
+    qcloudAppKeyTips: '腾讯云AppKey',
+    qcloudSignName: '短信签名',
+    qcloudTemplateId: '短信模板',
+    qcloudTemplateIdTips: '短信模板ID'
+  },
+  oss: {
+    config: '云存储配置',
+    upload: '上传文件',
+    url: 'URL地址',
+    createDate: '创建时间',
+    type: '类型',
+    type1: '七牛',
+    type2: '阿里云',
+    type3: '腾讯云',
+    type4: 'FastDFS',
+    type5: '本地上传',
+    qiniuDomain: '域名',
+    qiniuDomainTips: '七牛绑定的域名',
+    qiniuPrefix: '路径前缀',
+    qiniuPrefixTips: '不设置默认为空',
+    qiniuAccessKey: 'AccessKey',
+    qiniuAccessKeyTips: '七牛AccessKey',
+    qiniuSecretKey: 'SecretKey',
+    qiniuSecretKeyTips: '七牛SecretKey',
+    qiniuBucketName: '空间名',
+    qiniuBucketNameTips: '七牛存储空间名',
+    aliyunDomain: '域名',
+    aliyunDomainTips: '阿里云绑定的域名，如：http://  renren.io',
+    aliyunPrefix: '路径前缀',
+    aliyunPrefixTips: '不设置默认为空',
+    aliyunEndPoint: 'EndPoint',
+    aliyunEndPointTips: '阿里云EndPoint',
+    aliyunAccessKeyId: 'AccessKeyId',
+    aliyunAccessKeyIdTips: '阿里云AccessKeyId',
+    aliyunAccessKeySecret: 'AccessKeySecret',
+    aliyunAccessKeySecretTips: '阿里云AccessKeySecret',
+    aliyunBucketName: 'BucketName',
+    aliyunBucketNameTips: '阿里云BucketName',
+    qcloudDomain: '域名',
+    qcloudDomainTips: '腾讯云绑定的域名',
+    qcloudPrefix: '路径前缀',
+    qcloudPrefixTips: '不设置默认为空',
+    qcloudAppId: 'AppId',
+    qcloudAppIdTips: '腾讯云AppId',
+    qcloudSecretId: 'SecretId',
+    qcloudSecretIdTips: '腾讯云SecretId',
+    qcloudSecretKey: 'SecretKey',
+    qcloudSecretKeyTips: '腾讯云SecretKey',
+    qcloudBucketName: 'BucketName',
+    qcloudBucketNameTips: '腾讯云BucketName',
+    qcloudRegion: '所属地区',
+    qcloudRegionTips: '请选择',
+    qcloudRegionBeijing1: '北京一区（华北）',
+    qcloudRegionBeijing: '北京',
+    qcloudRegionShanghai: '上海（华东）',
+    qcloudRegionGuangzhou: '广州（华南）',
+    qcloudRegionChengdu: '成都（西南）',
+    qcloudRegionChongqing: '重庆',
+    qcloudRegionSingapore: '新加坡',
+    qcloudRegionHongkong: '香港',
+    qcloudRegionToronto: '多伦多',
+    qcloudRegionFrankfurt: '法兰克福',
+    localDomain: '域名',
+    localDomainTips: '绑定的域名，如：http://  renren.io',
+    fastdfsDomain: '域名',
+    fastdfsDomainTips: '绑定的域名，如：http://  renren.io',
+    localPrefix: '路径前缀',
+    localPrefixTips: '不设置默认为空',
+    localPath: '存储目录',
+    localPathTips: '如：D:/upload'
+  },
+  dept: {
+    name: '名称',
+    parentName: '上级部门',
+    sort: '排序',
+    parentNameDefault: '一级部门'
+  },
+  dict: {
+    dictName: '名称',
+    dictType: '类型',
+    dictValue: '值',
+    sort: '排序',
+    remark: '备注',
+    createDate: '创建时间'
+  },
+  logError: {
+    requestUri: '请求URI',
+    requestMethod: '请求方式',
+    requestParams: '请求参数',
+    ip: '操作IP',
+    userAgent: '用户代理',
+    createDate: '创建时间',
+    errorInfo: '异常信息'
+  },
+  logLogin: {
+    creatorName: '用户名',
+    status: '状态',
+    status0: '失败',
+    status1: '成功',
+    status2: '账号已锁定',
+    operation: '操作类型',
+    operation0: '登录',
+    operation1: '退出',
+    ip: '操作IP',
+    userAgent: 'User-Agent',
+    createDate: '创建时间'
+  },
+  logOperation: {
+    status: '状态',
+    status0: '失败',
+    status1: '成功',
+    creatorName: '用户名',
+    operation: '用户操作',
+    requestUri: '请求URI',
+    requestMethod: '请求方式',
+    requestParams: '请求参数',
+    requestTime: '请求时长',
+    ip: '操作IP',
+    userAgent: 'User-Agent',
+    createDate: '创建时间'
+  },
+  menu: {
+    name: '名称',
+    icon: '图标',
+    type: '类型',
+    type0: '菜单',
+    type1: '按钮',
+    sort: '排序',
+    url: '路由',
+    permissions: '授权标识',
+    permissionsTips: '多个用逗号分隔，如：sys:menu:save,sys:menu:update',
+    parentName: '上级菜单',
+    parentNameDefault: '一级菜单',
+    resource: '授权资源',
+    resourceUrl: '资源URL',
+    resourceMethod: '请求方式',
+    resourceAddItem: '添加一项'
+  },
+  params: {
+    paramCode: '编码',
+    paramValue: '值',
+    remark: '备注'
+  },
+  role: {
+    name: '名称',
+    remark: '备注',
+    createDate: '创建时间',
+    menuList: '菜单授权',
+    deptList: '数据授权'
+  },
+  user: {
+    username: '用户名',
+    deptName: '所属部门',
+    email: '邮箱',
+    mobile: '手机号',
+    status: '状态',
+    status0: '停用',
+    status1: '正常',
+    createDate: '创建时间',
+    password: '密码',
+    comfirmPassword: '确认密码',
+    realName: '真实姓名',
+    gender: '性别',
+    gender0: '男',
+    gender1: '女',
+    gender2: '保密',
+    roleIdList: '角色配置',
+    validate: {
+      comfirmPassword: '确认密码与密码输入不一致'
+    }
   }
 }
+
+t = Object.assign(t, yisiLang)
+
+export default t
